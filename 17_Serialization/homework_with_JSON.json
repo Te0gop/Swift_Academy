@@ -1,1 +1,1 @@
-{"name":"John Smith","age":25,"values":{"streetAddress":"21 2nd Street","city":"New York","state":"NY","postalCode":"10021","type":"home","number":"212 555-1234"}}
+{"name":"John Smith","age":25,"address":{"streetAddress":"21 2nd Street","city":"New York","state":"NY","postalCode":"10021","type":"home","number":"212 555-1234"}}
