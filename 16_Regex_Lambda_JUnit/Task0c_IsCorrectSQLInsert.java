@@ -18,8 +18,8 @@ public class Task0c_IsCorrectSQLInsert {
 		
 		
 		String line = "insert into teachers (teachers_name) values (\"Stoyan\");";
-		String command = "(insert)\\s(into)\\s([a-zA-Z])+\\s\\(([a-zA-Z]+)"
-		+ "\\_([a-zA-Z]+)\\)\\s(values)\\s+(\\(\\\")+([a-zA-Z])*\\\"\\)\\;";
+		String command = "(insert)\\s(into)\\s([a-zA-Z])+\\s\\(([a-zA-Z]+)\\_([a-zA-Z]+)"
+				+ "\\)\\s(values)\\s+\\((\\\"+([a-zA-Z])*\\\")\\)\\;";
 		
 		Pattern pattern = Pattern.compile(checkCompilePattern(command));
 		Matcher matcher = pattern.matcher(line);
@@ -28,7 +28,7 @@ public class Task0c_IsCorrectSQLInsert {
 		
 		while(matcher.find()) {
 			if(matcher.matches()) {
-				System.out.printf(matcher.group() + "\nInserted successful.");
+				System.out.printf(matcher.group(7) + " is inserted successful.");
 				isFind = true;
 			}
 		}
